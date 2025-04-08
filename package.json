@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@farcaster/auth-kit": "^0.6.0",
+    "@neynar/nodejs-sdk": "^2.25.1",
     "next": "15.2.4",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",

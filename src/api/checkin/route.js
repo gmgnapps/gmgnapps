@@ -1,15 +1,18 @@
 // src/app/api/checkin/route.js
 import { NextResponse } from "next/server";
+import { NeynarAPIClient } from "@neynar/nodejs-sdk";
+
+const client = new NeynarAPIClient(process.env.NEYNAR_API_KEY);
 
 export async function POST(request) {
   const body = await request.json();
   const fid = body.untrustedData?.fid || "anonymous";
   const today = new Date().toDateString();
 
-  // Simulasi penyimpanan dengan localStorage (ganti dengan database)
+  // Simulasi penyimpanan (ganti dengan database)
   const lastCheckInKey = `lastCheckIn_${fid}`;
   const pointsKey = `points_${fid}`;
-  const lastCheckIn = localStorage.getItem(lastCheckInKey) || null;
+  const lastCheckIn = localStorage.getItem(lastCheckInKey) || null; // Ganti dengan database
   let points = parseInt(localStorage.getItem(pointsKey)) || 0;
 
   let message = "";
@@ -17,7 +20,7 @@ export async function POST(request) {
     message = "Kamu sudah check-in hari ini!";
   } else {
     points += 100;
-    localStorage.setItem(lastCheckInKey, today);
+    localStorage.setItem(lastCheckInKey, today); // Ganti dengan database
     localStorage.setItem(pointsKey, points);
     message = "Check-in berhasil! +100 poin.";
   }
