@@ -7,17 +7,24 @@ export const metadata = {
     description: "Check-in daily and invite friends to earn points!",
     images: [
       {
-        url: "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
+        url: "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
       },
     ],
   },
   other: {
-    "fc:frame": "v2",
-    "fc:frame:image": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
-    "fc:frame:image:aspect_ratio": "3:2",
-    "fc:frame:button:1": "Login with Warpcast",
-    "fc:frame:button:1:action": "post",
-    "fc:frame:button:1:target": "https://gmgnapps.vercel.app/api/login",
+    "fc:frame": JSON.stringify({
+      version: "next",
+      imageUrl: "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
+      button: {
+        title: "Claim",
+        action: {
+          type: "launch_frame",
+          name: "Claim",
+          url: "https://gmgnapps.vercel.app",
+          splashImageUrl: "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
+        },
+      },
+    }),
   },
 };
 
