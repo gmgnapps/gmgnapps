@@ -1,7 +1,6 @@
 // src/app/page.js
 "use client";
 import { useState, useEffect, Suspense } from "react";
-import { FarcasterAuth } from "@farcaster/auth-kit";
 import ReferralSection from "./ReferralSection";
 import styles from "./page.module.css";
 
@@ -14,8 +13,11 @@ export default function Home() {
   useEffect(() => {
     const storedPoints = localStorage.getItem("points");
     const storedCheckIn = localStorage.getItem("lastCheckIn");
+    const storedUser = localStorage.getItem("farcasterUser"); // Simpan FID sementara di localStorage
+
     if (storedPoints) setPoints(parseInt(storedPoints));
     if (storedCheckIn) setLastCheckIn(storedCheckIn);
+    if (storedUser) setUser(JSON.parse(storedUser));
     if (window["sdk"]) window["sdk"].actions.ready();
   }, []);
 
@@ -37,10 +39,11 @@ export default function Home() {
       <h1>Hello, World!</h1>
       <p>Selamat datang di aplikasi mini Warpcast sederhana.</p>
       {!user ? (
-        <FarcasterAuth
-          onSuccess={(data) => setUser(data)}
-          domain="gmgnapps.vercel.app"
-        />
+        <div>
+          <p>Silakan login melalui Warpcast frame untuk melanjutkan.</p>
+          {/* Petunjuk login via Warpcast frame */}
+          <p>Tempel URL ini di Warpcast: <code>https://gmgnapps.vercel.app</code></p>
+        </div>
       ) : (
         <>
           <p>Logged in as FID: {user.fid}</p>

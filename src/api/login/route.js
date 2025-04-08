@@ -9,7 +9,7 @@ export async function POST(request) {
   const fid = body.untrustedData?.fid || "anonymous";
 
   // Verifikasi FID dengan Neynar (opsional untuk keamanan)
-  const user = await client.lookupUserById(fid);
+  const user = await client.lookupUserById(fid).catch(() => ({ fid }));
 
   return NextResponse.json({
     version: "v2",
