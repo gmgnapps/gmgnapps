@@ -1,0 +1,18 @@
+{
+    "accountAssociation": {
+      "header": "eyJmaWQiOjk0NTE3NCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDZCZjczOGM4NUM3NDQ2OERFYzc5ZTEyMTVENzdkRjM3RjA2MzUzMzUifQ",
+      "payload": "eyJkb21haW4iOiJnbWduYXBwcy52ZXJjZWwuYXBwIn0",
+      "signature": "MHgxZDUwZWVkZmEyYjc4YzJmMmExOWQ1NWJmYTI2OWNlY2ZmZDYzMDdkNjQxOWJkMTU2MTIwNmI3MTY0MjYyZGNiMmQzNGE2OTY0NmExNGY2Y2I1MjZhYjQ4MjMwMjhlMzIzYjU2NjIzNjIyNDg5NjYxZWYwZGQyM2UzZWUwYWNmZTFj"
+    },
+    "frame": {
+      "version": "1",
+      "name": "Example Frame",
+      "iconUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
+      "homeUrl": "https://gmgnapps.vercel.app",
+      "imageUrl": "https://gmgnapps.vercel.app/image.png",
+      "buttonTitle": "Launch",
+      "splashImageUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
+      "splashBackgroundColor": "#855dcd",
+      "webhookUrl": "https://gmgnapps.vercel.app/api/webhook"
+    }
+  }
