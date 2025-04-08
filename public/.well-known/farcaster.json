@@ -6,12 +6,12 @@
     },
     "frame": {
       "version": "1",
-      "name": "Example Frame",
-      "iconUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
+      "name": "gmgnapps",
+      "iconUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
       "homeUrl": "https://gmgnapps.vercel.app",
       "imageUrl": "https://gmgnapps.vercel.app/image.png",
-      "buttonTitle": "Launch",
-      "splashImageUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafybeigl52oq5hpfmndpm6gelkw6gdp2hoxmkc7q6bowxjkcdmuac4qa7m",
+      "buttonTitle": "Claim",
+      "splashImageUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
       "splashBackgroundColor": "#855dcd",
       "webhookUrl": "https://gmgnapps.vercel.app/api/webhook"
     }

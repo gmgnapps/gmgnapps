@@ -22,6 +22,7 @@ export const metadata = {
           name: "Claim",
           url: "https://gmgnapps.vercel.app",
           splashImageUrl: "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiblfdnva2paaprujwygp5x6mh4slgi4iixx75ejgzl5ouwknef2lq",
+          splashBackgroundColor: "#855dcd"
         },
       },
     }),
