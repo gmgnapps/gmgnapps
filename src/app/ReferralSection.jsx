@@ -1,6 +1,4 @@
-// src/app/ReferralSection.jsx
 "use client";
-
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import styles from "./page.module.css";
@@ -10,15 +8,12 @@ export default function ReferralSection() {
   const [message, setMessage] = useState("");
   const searchParams = useSearchParams();
 
-  // Fungsi untuk menghasilkan ID unik sederhana untuk referral
   const generateReferralId = () => {
     return Math.random().toString(36).substr(2, 9);
   };
 
   useEffect(() => {
     const storedReferralId = localStorage.getItem("referralId");
-
-    // Buat atau ambil referral ID pengguna
     let userReferralId = storedReferralId;
     if (!userReferralId) {
       userReferralId = generateReferralId();
@@ -26,7 +21,6 @@ export default function ReferralSection() {
     }
     setReferralLink(`${window.location.origin}?ref=${userReferralId}`);
 
-    // Cek apakah ada referral dari URL
     const ref = searchParams.get("ref");
     if (ref && ref !== userReferralId) {
       const referrerPoints = localStorage.getItem(`points_${ref}`) || 0;
@@ -36,7 +30,6 @@ export default function ReferralSection() {
     }
   }, [searchParams]);
 
-  // Fungsi untuk menyalin referral link ke clipboard
   const copyReferralLink = () => {
     navigator.clipboard.writeText(referralLink);
     setMessage("Referral link disalin ke clipboard!");

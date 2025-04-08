@@ -1,8 +1,6 @@
-// src/app/page.js
 "use client";
-
 import { useState, useEffect, Suspense } from "react";
-import ReferralSection from "./ReferralSection"; // Komponen baru untuk referral
+import ReferralSection from "./ReferralSection";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -10,7 +8,6 @@ export default function Home() {
   const [lastCheckIn, setLastCheckIn] = useState(null);
   const [message, setMessage] = useState("");
 
-  // Memuat data dari localStorage
   useEffect(() => {
     const storedPoints = localStorage.getItem("points");
     const storedCheckIn = localStorage.getItem("lastCheckIn");
@@ -18,13 +15,11 @@ export default function Home() {
     if (storedPoints) setPoints(parseInt(storedPoints));
     if (storedCheckIn) setLastCheckIn(storedCheckIn);
 
-    // Memuat SDK Warpcast
     if (window["sdk"]) {
       window["sdk"].actions.ready();
     }
   }, []);
 
-  // Fungsi untuk menangani check-in harian
   const handleCheckIn = () => {
     const today = new Date().toDateString();
     if (lastCheckIn === today) {
@@ -51,8 +46,6 @@ export default function Home() {
         </button>
         {message && <p>{message}</p>}
       </div>
-
-      {/* Bagian Referral dengan Suspense */}
       <Suspense fallback={<p>Loading referral section...</p>}>
         <ReferralSection />
       </Suspense>
